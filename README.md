@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Livre Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application React permettant d'ajouter, gérer et afficher une liste de livres, avec un formulaire complet et une validation des données.
 
-## Available Scripts
+## Fonctionnalités
 
-In the project directory, you can run:
+- Formulaire d'ajout de livre avec les champs suivants :
+  - **Num** : numéro/identifiant du livre
+  - **Titre** : titre de l'ouvrage
+  - **Date d'édition** : date de publication
+  - **Genre littéraire** : sélection parmi une liste déroulante (ex : Comédie, Roman, Poésie...)
+  - **Prix** : prix du livre
+- Bouton **Ajouter** pour enregistrer un nouveau livre
+- Bouton **Réinitialiser** pour vider le formulaire
+- Affichage dynamique de la liste des livres ajoutés sous forme de liste
 
-### `npm start`
+## Aperçu
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Aperçu de l'application](./public/Livre.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Ajoutez une capture d'écran du projet dans le dossier racine sous le nom `./public/Livre.png` pour qu'elle s'affiche ici.
 
-### `npm test`
+## Technologies utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React JS](https://react.dev/) (créé avec Create React App)
+- JavaScript (ES6+)
+- CSS
 
-### `npm run build`
+## Installation et lancement
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Cloner le dépôt :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/<ton-nom-utilisateur>/livre-manager.git
+   cd livre-manager
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Installer les dépendances :
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Lancer l'application en mode développement :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Structure du projet
 
-## Learn More
+```
+livre-manager/
+├── public/
+│   └── index.html
+├── src/
+│   ├── AjouteLivre.js     # Composant du formulaire d'ajout de livre
+│   ├── App.js             # Composant principal
+│   ├── App.css            # Styles du composant principal
+│   ├── index.js           # Point d'entrée de l'application
+│   ├── index.css          # Styles globaux
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Améliorations possibles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Persistance des données (localStorage ou backend)
+- Modification et suppression d'un livre existant
+- Validation plus poussée des champs (dates, prix négatifs, etc.)
+- Tri et recherche dans la liste des livres
 
-### Code Splitting
+## Auteur
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Développé par **Derrick Teddy Wongbay** — développeur web full-stack.
 
-### Analyzing the Bundle Size
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
